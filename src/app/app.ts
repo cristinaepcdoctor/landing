@@ -6,7 +6,7 @@ import { Hero } from './components/landing/hero/hero';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Header, Hero ],
+  imports: [Header, Features, Hero],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
