@@ -6,13 +6,13 @@ import { Features } from './components/landing/features/features';
 import { Advantages } from './components/landing/advantages/advantages';
 import { Masc } from './components/landing/masc/masc';
 import { Security } from './components/landing/security/security';
-import { FAQ } from './components/landing/faq/faq';
 import { Contact } from './components/landing/contact/contact';
+import { FAQ } from './components/landing/faq/faq';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Header, Hero, Features, Masc, Advantages, Security, Contact, FAQ], //
+  imports: [Header, Hero, Features, Masc, Advantages, Security, Contact, FAQ], 
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

@@ -1,1 +1,10 @@
-/* Contact styles */
+/* Azul personalizado igual al hero */
+.cta-blue-bg {
+	background-color: #1a4d6d !important;
+}
+.cta-blue-text {
+	color: #1a4d6d !important;
+}
+.cta-blue-bg:hover {
+	background-color: #163e57 !important;
+}
