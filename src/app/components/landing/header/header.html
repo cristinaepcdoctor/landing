@@ -1,89 +1,54 @@
-<header class="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur-md">
-  <nav
-    class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8"
-    aria-label="Navegación principal"
-  >
+<header class="header">
+  <nav class="header__nav" aria-label="Navegación principal">
     <!-- Logo -->
-    <a href="/" class="flex items-center gap-2" aria-label="LexFolder - Inicio">
-      <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-700">
-        <span class="text-lg font-bold text-white">L</span>
+    <a href="/" class="header__logo" aria-label="LexFolder - Inicio">
+      <div class="header__logo-icon">
+        <img src="/logo-lexfolder.png" alt="LexFolder Logo" class="header__logo-image">
       </div>
-      <span class="text-xl font-bold tracking-tight text-gray-900">LexFolder</span>
+      <span class="header__logo-name">LexFolder</span>
     </a>
 
     <!-- Nav escritorio -->
-    <ul class="hidden items-center gap-1 md:flex" role="list">
+    <ul class="header__nav-list" role="list">
       <li *ngFor="let link of navLinks">
-        <a
-          [href]="link.href"
-          class="rounded-md px-3 py-2 text-sm font-medium text-gray-500 transition-colors hover:text-gray-900"
-        >
+        <a [href]="link.href" class="header__nav-link">
           {{ link.label }}
         </a>
       </li>
     </ul>
 
     <!-- Botones escritorio -->
-    <div class="hidden items-center gap-3 md:flex">
-      <a
-        href="https://lexfolder.net"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900"
-      >
+    <div class="header__actions">
+      <a href="https://lexfolder.net/login" target="_blank" rel="noopener noreferrer" class="header__action-link">
         Iniciar sesión
       </a>
-      <a
-        href="https://lexfolder.net"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="rounded-md bg-blue-700 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-800"
-      >
+      <a href="https://lexfolder.net" target="_blank" rel="noopener noreferrer" class="header__action-button">
         Comenzar ahora
       </a>
     </div>
 
     <!-- Botón menú móvil -->
-    <button
-      class="inline-flex items-center justify-center rounded-md p-2 text-gray-500 hover:text-gray-900 md:hidden"
-      (click)="toggleMenu()"
-      [attr.aria-expanded]="mobileOpen"
-      aria-controls="mobile-menu"
-      [attr.aria-label]="mobileOpen ? 'Cerrar menú' : 'Abrir menú'"
-    >
+    <button class="header__mobile-toggle" (click)="toggleMenu()" [attr.aria-expanded]="mobileOpen"
+      aria-controls="mobile-menu" [attr.aria-label]="mobileOpen ? 'Cerrar menú' : 'Abrir menú'">
       <span class="material-icons" *ngIf="!mobileOpen">menu</span>
       <span class="material-icons" *ngIf="mobileOpen">close</span>
     </button>
   </nav>
 
   <!-- Menú móvil -->
-  <div *ngIf="mobileOpen" id="mobile-menu" class="border-t border-gray-200 px-4 pb-4 md:hidden">
-    <ul class="flex flex-col gap-1 pt-2" role="list">
+  <div *ngIf="mobileOpen" id="mobile-menu" class="header__mobile-menu">
+    <ul class="header__mobile-list" role="list">
       <li *ngFor="let link of navLinks">
-        <a
-          [href]="link.href"
-          class="block rounded-md px-3 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-900"
-          (click)="toggleMenu()"
-        >
+        <a [href]="link.href" class="header__mobile-link" (click)="toggleMenu()">
           {{ link.label }}
         </a>
       </li>
     </ul>
-    <div class="mt-3 flex flex-col gap-2">
-      <a
-        href="https://lexfolder.net"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="w-full rounded-md border border-gray-300 px-4 py-2 text-center text-sm font-medium text-gray-700 hover:bg-gray-50"
-      >
+    <div class="header__mobile-actions">
+      <a href="https://lexfolder.net" target="_blank" rel="noopener noreferrer" class="header__mobile-action-link">
         Iniciar sesión
       </a>
-      <a
-        href="https://lexfolder.net"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="w-full rounded-md bg-blue-700 px-4 py-2 text-center text-sm font-semibold text-white hover:bg-blue-800"
-      >
+      <a href="https://lexfolder.net" target="_blank" rel="noopener noreferrer" class="header__mobile-action-button">
         Comenzar ahora
       </a>
     </div>

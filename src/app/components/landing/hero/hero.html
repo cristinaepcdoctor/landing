@@ -1,1 +1,69 @@
-<p>hero works!</p>
+<section class="hero-section">
+    <!-- Subtle geometric background -->
+    <div class="hero-background">
+        <div class="hero-background__circle hero-background__circle--1"></div>
+        <div class="hero-background__circle hero-background__circle--2"></div>
+        <div class="hero-background__circle hero-background__circle--3"></div>
+    </div>
+
+    <div class="hero-container">
+        <div class="hero-content">
+            <!-- Eyebrow -->
+            <p class="hero-eyebrow">
+                <svg class="hero-eyebrow__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                Plataforma segura y conforme al RGPD
+            </p>
+
+            <!-- H1 - Primary SEO target -->
+            <h1 class="hero-title">
+                Software de gestión integral para despachos de abogados
+            </h1>
+
+            <!-- Subheadline with secondary keywords -->
+            <p class="hero-subtitle">
+                Gestiona tu despacho profesional con eficacia desde cualquier lugar.
+                Gestión documental, videoconferencias, firma electrónica, facturación
+                Veri*Factu y resolución de disputas MASC en una sola plataforma.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="hero-buttons">
+                <a href="https://lexfolder.net" target="_blank" rel="noopener noreferrer" class="hero-button hero-button--primary">
+                    Comenzar prueba gratuita
+                    <svg class="hero-button__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </a>
+                <a href="#caracteristicas" class="hero-button hero-button--secondary">
+                    Explorar funcionalidades
+                </a>
+            </div>
+        </div>
+
+        <!-- Trust signals -->
+        <div class="hero-signals">
+            <div *ngFor="let signal of trustSignals" class="hero-signal">
+                <div class="hero-signal__icon-wrapper">
+                    <svg class="hero-signal__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path *ngIf="signal.icon === 'shield'" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        <path *ngIf="signal.icon === 'globe'" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20H7m6-4h.01M15 12H9">
+                        </path>
+                        <path *ngIf="signal.icon === 'zap'" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                <div>
+                    <p class="hero-signal__title">{{ signal.title }}</p>
+                    <p class="hero-signal__text">{{ signal.text }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

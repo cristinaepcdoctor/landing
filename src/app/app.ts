@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { Header } from './components/landing/header/header';
-import { Features } from './components/landing/features/features';
 import { Hero } from './components/landing/hero/hero';
 
 @Component({

@@ -1,27 +1,35 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+interface TrustSignal {
+  icon: string;
+  title: string;
+  text: string;
+}
 
 @Component({
   selector: 'app-hero',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './hero.html',
   styleUrl: './hero.css',
 })
 export class Hero {
-  trustItems = [
+  trustSignals: TrustSignal[] = [
     {
       icon: 'shield',
       title: 'Seguridad RGPD',
       text: 'Cumplimiento normativo europeo',
     },
     {
-      icon: 'language',
+      icon: 'globe',
       title: 'Acceso 100% online',
-      text: 'Desde cualquier dispositivo, en cualquier momento',
+      text: 'Desde cualquier dispositivo',
     },
     {
-      icon: 'bolt',
+      icon: 'zap',
       title: 'Sincronización en tiempo real',
-      text: 'Actualizaciones instantáneas en todos tus dispositivos',
+      text: 'Equipo siempre actualizado',
     },
   ];
 }
