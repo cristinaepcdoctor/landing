@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { Header } from './components/landing/header/header';
+import { Hero } from './components/landing/hero/hero';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Header],
+  imports: [Header, Hero ],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
