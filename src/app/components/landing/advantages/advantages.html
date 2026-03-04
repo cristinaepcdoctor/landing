@@ -1,3 +1,56 @@
-<section id="ventajas">
-<p>Ventajas</p>
+<section class="advantages-section" id="ventajas">
+    <div class="advantages-container">
+        <!-- Section header -->
+        <div class="advantages-header">
+            <p class="advantages-label">Ventajas</p>
+            <h2 class="advantages-title">
+                Por qué los despachos profesionales eligen LexFolder
+            </h2>
+            <p class="advantages-subtitle">
+                Una plataforma diseñada específicamente para las necesidades reales
+                de abogados, mediadores y profesionales del derecho.
+            </p>
+        </div>
+
+        <!-- Benefits grid -->
+        <div class="advantages-grid">
+            <article *ngFor="let benefit of benefits" class="advantage-card">
+                <div class="advantage-icon-wrapper">
+                    <svg class="advantage-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <!-- Shield Check -->
+                        <g *ngIf="benefit.icon === 'shield-check'">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </g>
+                        <!-- Laptop -->
+                        <g *ngIf="benefit.icon === 'laptop'">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 3v2m6-2v2M9 5h6m-6 0a2 2 0 00-2 2v3H5V7a2 2 0 012-2h10a2 2 0 012 2v3h-2V7a2 2 0 00-2-2m0 0H9m11 5v10a2 2 0 01-2 2H7a2 2 0 01-2-2V10h16z">
+                            </path>
+                        </g>
+                        <!-- Trending Up -->
+                        <g *ngIf="benefit.icon === 'trending-up'">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </g>
+                        <!-- Refresh CW -->
+                        <g *ngIf="benefit.icon === 'refresh-cw'">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="advantage-title-card">{{ benefit.title }}</h3>
+                    <p class="advantage-description">{{ benefit.description }}</p>
+                    <div class="advantage-highlights">
+                        <span *ngFor="let tag of benefit.highlights" class="advantage-tag">
+                            {{ tag }}
+                        </span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
 </section>

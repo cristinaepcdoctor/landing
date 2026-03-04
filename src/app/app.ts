@@ -21,7 +21,7 @@ export class App implements OnInit {
     //Meta y Title son servicios de Angular que permiten modificar los meta tags del <head> en tiempo de ejecución, lo que es especialmente útil con SSR para mejorar el SEO y la apariencia en redes.
     private title: Title,
     private meta: Meta,
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.title.setTitle('LexFolder | Software de gestión para despachos de abogados');
