@@ -3,14 +3,17 @@ import { Meta, Title } from '@angular/platform-browser';
 import { Header } from './components/landing/header/header';
 import { Hero } from './components/landing/hero/hero';
 import { Features } from './components/landing/features/features';
-import { MascSection } from './components/landing/masc-section/masc-section';
-import { CtaSection } from './components/landing/cta-section/cta-section';
 import { Footer } from './components/landing/footer/footer';
+import { Advantages } from './components/landing/advantages/advantages';
+import { Masc } from './components/landing/masc/masc';
+import { Security } from './components/landing/security/security';
+import { Contact } from './components/landing/contact/contact';
+import { FAQ } from './components/landing/faq/faq';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Header, Features, Hero, MascSection, CtaSection, Footer],
+  imports: [Header, Hero, Features, Masc, Advantages, Security, Contact, FAQ, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

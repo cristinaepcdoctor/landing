@@ -1,0 +1,31 @@
+<section class="advantages-section" id="ventajas">
+    <div class="advantages-container">
+        <!-- Section header -->
+        <div class="advantages-header">
+            <p class="advantages-label">Ventajas</p>
+            <h2 class="advantages-title">
+                Por qué los despachos profesionales eligen LexFolder
+            </h2>
+            <p class="advantages-subtitle">
+                Una plataforma diseñada específicamente para las necesidades reales
+                de abogados, mediadores y profesionales del derecho.
+            </p>
+        </div>
+
+        <!-- Benefits grid -->
+        <div class="advantages-grid">
+            <article *ngFor="let benefit of benefits" class="advantage-card">
+                <div class="advantage-icon-wrapper">
+                    <span class="material-icons advantage-icon">{{ benefit.icon }}</span>
+                </div>
+                <div>
+                    <h3 class="advantage-title-card">{{ benefit.title }}</h3>
+                    <p class="advantage-description">{{ benefit.description }}</p>
+                    <span *ngFor="let tag of benefit.highlights" class="advantage-tag">
+                        {{ tag }}
+                    </span>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
