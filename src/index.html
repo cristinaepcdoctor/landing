@@ -1,16 +1,19 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <!-- Le decimos a google qué es LexFolder, qué hace y cómo categorizarlo -->
-    <script type="application/ld+json">
+
+<head>
+  <!-- Schema.org: SoftwareApplication -->
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "LexFolder",
-        "description": "Software de gestión integral para despachos de abogados. Gestión documental, videoconferencias, firma electrónica, facturación Veri*Factu y procedimientos MASC.",
+        "description": "Software de gestión integral para despachos de abogados. Gestión documental, 
+        videoconferencias, firma electrónica, facturación Veri*Factu y procedimientos MASC.",
         "url": "https://landing.lexfolder.net",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
+        "inLanguage": "es",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -20,7 +23,15 @@
         "provider": {
           "@type": "Organization",
           "name": "LexFolder",
-          "url": "https://lexfolder.net"
+          "url": "https://lexfolder.net",
+          "logo": "https://landing.lexfolder.net/logo-lexfolder.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+34-635-64-64-55",
+            "email": "soporte@lexfolder.es",
+            "contactType": "customer support",
+            "availableLanguage": "Spanish"
+          }
         },
         "featureList": [
           "Gestión documental",
@@ -32,45 +43,146 @@
         ]
       }
     </script>
-    <!--Metadatos para posicionamiento en redes-->
-    <meta charset="utf-8" />
-    <title>LexFolder | Software de gestión para despachos de abogados</title>
-    <meta
-      name="description"
-      content="Gestiona tu despacho profesional con LexFolder. Gestión documental, videoconferencias, firma electrónica, facturación Veri*Factu y procedimientos MASC en una sola plataforma."
-    />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://landing.lexfolder.net/" />
 
-    <!-- Open Graph (para compartir en redes sociales) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://landing.lexfolder.net/" />
-    <meta
-      property="og:title"
-      content="LexFolder | Software de gestión para despachos de abogados"
-    />
-    <meta
-      property="og:description"
-      content="Gestiona tu despacho profesional con LexFolder. Gestión documental, videoconferencias, firma electrónica, facturación Veri*Factu y MASC en una sola plataforma."
-    />
+  <!-- Schema.org: Organization -->
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "LexFolder",
+        "url": "https://lexfolder.net",
+        "logo": "https://landing.lexfolder.net/logo-lexfolder.png",
+        "description": "Plataforma de gestión documental y procedimientos MASC para despachos de abogados y profesionales del derecho.",
+        "telephone": "+34635646455",
+        "email": "soporte@lexfolder.es",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "ES"
+        }
+      }
+    </script>
 
-    <!-- Twitter/X -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="LexFolder | Software de gestión para despachos de abogados"
-    />
-    <meta
-      name="twitter:description"
-      content="Gestiona tu despacho profesional con LexFolder. Gestión documental, videoconferencias, firma electrónica, facturación Veri*Factu y MASC en una sola plataforma."
-    />
-    <base href="/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="logo-lexfolder.png" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  </head>
+  <!-- Schema.org: FAQPage (Rich Snippets en Google) -->
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Qué es LexFolder y para quién está diseñado?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "LexFolder es un software de gestión integral diseñado específicamente 
+              para despachos de abogados, mediadores, árbitros y profesionales del derecho. 
+              Permite gestionar expedientes, documentos, comunicaciones, facturación y procedimientos 
+              MASC desde una única plataforma online."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Necesito instalar algún software para usar LexFolder?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. LexFolder es una plataforma 100% online (SaaS). Solo necesitas un 
+              navegador web y conexión a internet. Funciona en cualquier dispositivo: ordenador, 
+              tablet o teléfono móvil, sin instalaciones ni actualizaciones manuales."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿LexFolder cumple con el RGPD y la normativa de protección de datos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. LexFolder está diseñado con el cumplimiento normativo del RGPD como 
+              prioridad. Implementamos cifrado SSL, controles de acceso granulares, copias de 
+              seguridad automáticas y todas las medidas técnicas necesarias para proteger los 
+              datos personales de tus clientes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué son los procedimientos MASC y cómo ayuda LexFolder?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "MASC son los Medios Adecuados de Solución de Controversias, que incluyen 
+              mediación, arbitraje, conciliación y negociación. LexFolder ofrece herramientas 
+              especializadas: plantillas de actas, seguimiento de procesos, comunicación segura 
+              entre partes y gestión de plazos."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué es la firma electrónica Click & Sign?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Click & Sign es el sistema de firma electrónica integrado en LexFolder 
+              que permite firmar documentos online con plena validez legal desde cualquier dispositivo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué es Veri*Factu y cómo funciona en LexFolder?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Veri*Factu es el sistema de facturación electrónica conforme a la normativa 
+              vigente en España. LexFolder incorpora emisión de facturas electrónicas adaptada a los requisitos legales."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Los certificados de envío y apertura tienen validez legal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. LexFolder genera certificados de envío y apertura de comunicaciones con 
+              plena validez legal, acreditando la entrega del contenido y la fecha y hora exacta de su lectura."
+            }
+          }
+        ]
+      }
+    </script>
 
-  <body>
-    <app-root></app-root>
-  </body>
+  <!-- Metadatos esenciales -->
+  <meta charset="utf-8" />
+  <title>LexFolder | Software de gestión para despachos de abogados</title>
+  <meta name="description" content="Gestiona tu despacho profesional con LexFolder. Gestión documental, videoconferencias, firma electrónica, 
+      facturación Veri*Factu y procedimientos MASC en una sola plataforma." />
+  <meta name="author" content="LexFolder" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://landing.lexfolder.net/" />
+
+  <!-- Open Graph (compartir en redes sociales) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://landing.lexfolder.net/" />
+  <meta property="og:title" content="LexFolder | Software de gestión para despachos de abogados" />
+  <meta property="og:description" content="Gestiona tu despacho profesional con LexFolder. Gestión documental, 
+    videoconferencias, firma electrónica, facturación Veri*Factu y MASC en una sola plataforma." />
+  <meta property="og:image" content="https://landing.lexfolder.net/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="LexFolder - Software de gestión para despachos de abogados" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="LexFolder" />
+
+  <!-- Twitter/X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LexFolder | Software de gestión para despachos de abogados" />
+  <meta name="twitter:description" content="Gestiona tu despacho profesional con LexFolder. 
+    Gestión documental, videoconferencias, firma electrónica, facturación Veri*Factu y MASC en una sola plataforma." />
+  <meta name="twitter:image" content="https://landing.lexfolder.net/og-image.png" />
+
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="logo-lexfolder.png" />
+
+  <!-- Preconnect para mejorar LCP (Core Web Vitals) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body>
+  <app-root></app-root>
+</body>
+
 </html>

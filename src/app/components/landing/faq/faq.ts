@@ -11,45 +11,44 @@ import { CommonModule } from '@angular/common';
 export class FAQ {
     faqs = [
         {
-            question: "Que es LexFolder y para quien esta disenado?",
+            question: "¿Qué es LexFolder y para quién está diseñado?",
             answer:
-                "LexFolder es un software de gestion integral disenado especificamente para despachos de abogados, mediadores, arbitros y profesionales del derecho. Permite gestionar expedientes, documentos, comunicaciones, facturacion y procedimientos de resolucion alternativa de disputas (MASC) desde una unica plataforma online.",
+                "LexFolder es un software de gestión integral diseñado específicamente para despachos de abogados, mediadores, árbitros y profesionales del derecho. Permite gestionar expedientes, documentos, comunicaciones, facturación y procedimientos de resolución alternativa de disputas (MASC) desde una única plataforma online.",
         },
         {
-            question: "Necesito instalar algun software para usar LexFolder?",
+            question: "¿Necesito instalar algún software para usar LexFolder?",
             answer:
-                "No. LexFolder es una plataforma 100% online (SaaS). Solo necesitas un navegador web y conexion a internet. Funciona en cualquier dispositivo: ordenador, tablet o telefono movil, sin necesidad de instalaciones ni actualizaciones manuales.",
+                "No. LexFolder es una plataforma 100% online (SaaS). Solo necesitas un navegador web y conexión a internet. Funciona en cualquier dispositivo: ordenador, tablet o teléfono móvil, sin necesidad de instalaciones ni actualizaciones manuales.",
         },
         {
-            question: "LexFolder cumple con el RGPD y la normativa de proteccion de datos?",
+            question: "¿LexFolder cumple con el RGPD y la normativa de protección de datos?",
             answer:
-                "Si. LexFolder esta disenado con el cumplimiento normativo del RGPD como prioridad. Implementamos cifrado SSL en todas las comunicaciones, controles de acceso granulares, copias de seguridad automaticas y todas las medidas tecnicas necesarias para proteger los datos personales de tus clientes.",
+                "Sí. LexFolder está diseñado con el cumplimiento normativo del RGPD como prioridad. Implementamos cifrado SSL en todas las comunicaciones, controles de acceso granulares, copias de seguridad automáticas y todas las medidas técnicas necesarias para proteger los datos personales de tus clientes.",
         },
         {
-            question: "Que son los procedimientos MASC y como ayuda LexFolder?",
+            question: "¿Qué son los procedimientos MASC y cómo ayuda LexFolder?",
             answer:
-                "MASC son los Medios Adecuados de Solucion de Controversias, que incluyen mediacion, arbitraje, conciliacion y negociacion. LexFolder ofrece herramientas especializadas para gestionar estos procedimientos: plantillas de actas, seguimiento de procesos, comunicacion segura entre partes, gestion de plazos y documentacion automatizada.",
+                "MASC son los Medios Adecuados de Solución de Controversias, que incluyen mediación, arbitraje, conciliación y negociación. LexFolder ofrece herramientas especializadas para gestionar estos procedimientos: plantillas de actas, seguimiento de procesos, comunicación segura entre partes, gestión de plazos y documentación automatizada.",
         },
         {
-            question: "Que es la firma electronica Click & Sign?",
+            question: "¿Qué es la firma electrónica Click & Sign?",
             answer:
-                "Click & Sign es el sistema de firma electronica integrado en LexFolder que permite firmar documentos online con plena validez legal. Tus clientes pueden firmar documentos desde cualquier dispositivo sin necesidad de desplazarse, agilizando los procesos de tu despacho.",
+                "Click & Sign es el sistema de firma electrónica integrado en LexFolder que permite firmar documentos online con plena validez legal. Tus clientes pueden firmar documentos desde cualquier dispositivo sin necesidad de desplazarse, agilizando los procesos de tu despacho.",
         },
         {
-            question: "Que es Veri*Factu y como funciona en LexFolder?",
+            question: "¿Qué es Veri*Factu y cómo funciona en LexFolder?",
             answer:
-                "Veri*Factu es el sistema de facturacion electronica conforme a la normativa vigente en Espana. LexFolder incorpora la emision de facturas electronicas adaptada a los requisitos legales, permitiendote facturar a tus clientes de forma rapida, segura y conforme a la ley.",
+                "Veri*Factu es el sistema de facturación electrónica conforme a la normativa vigente en España. LexFolder incorpora la emisión de facturas electrónicas adaptada a los requisitos legales, permitiéndote facturar a tus clientes de forma rápida, segura y conforme a la ley.",
         },
         {
-            question: "Puedo migrar mis datos actuales a LexFolder?",
+            question: "¿Puedo migrar mis datos actuales a LexFolder?",
             answer:
-                "Si. LexFolder ofrece asistencia en la migracion de datos para que la transicion sea lo mas sencilla posible. Nuestro equipo de soporte te guiara durante todo el proceso para que puedas empezar a trabajar con toda tu informacion disponible.",
+                "Sí. LexFolder ofrece asistencia en la migración de datos para que la transición sea lo más sencilla posible. Nuestro equipo de soporte te guiará durante todo el proceso para que puedas empezar a trabajar con toda tu información disponible.",
         },
         {
-            question: "Los certificados de envio y apertura tienen validez legal?",
+            question: "¿Los certificados de envío y apertura tienen validez legal?",
             answer:
-                "Si. LexFolder genera certificados de envio y apertura de comunicaciones con plena validez legal. Estos certificados acreditan tanto la entrega del contenido como la fecha y hora exacta de su lectura, proporcionando prueba fehaciente en caso de disputas.",
+                "Sí. LexFolder genera certificados de envío y apertura de comunicaciones con plena validez legal. Estos certificados acreditan tanto la entrega del contenido como la fecha y hora exacta de su lectura, proporcionando prueba fehaciente en caso de disputas.",
         },
     ]
-
 }
