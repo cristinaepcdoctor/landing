@@ -112,10 +112,11 @@
     background-color: #1a4d6d;
 }
 
-.advantage-icon {
-    height: 1.75rem;
-    width: 1.75rem;
-    stroke: white;
+.advantage-icon { 
+    font-size: 1.75rem;  
+    color: white;
+    display: block; 
+    line-height: 1;
 }
 
 /* ========================

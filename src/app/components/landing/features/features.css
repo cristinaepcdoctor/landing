@@ -1,1 +1,122 @@
-/* Features styles */
+/* Estructura y Contenedores */
+.seccion-caracteristicas {
+    background-color: #ffffff; 
+    padding: 5rem 1rem; 
+}
+
+.contenedor-principal {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80rem; 
+}
+
+/* Cabecera */
+.cabecera {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 42rem; 
+    text-align: center;
+}
+
+.subtitulo {
+    margin-top: 0.6rem;
+    font-size: 1.225rem;
+    font-weight: 500;
+    line-height: 1.75;
+    color: #6b7280;
+}
+
+.titulo {
+    margin-top: 0.75rem; 
+    font-size: 1.875rem; 
+    font-weight: 700; 
+    letter-spacing: -0.025em; 
+    color: #111827; 
+}
+
+.descripcion {
+    margin-top: 1rem; 
+    font-size: 1.125rem; 
+    line-height: 1.625; 
+    color: #6b7280; 
+}
+
+/* Grid de Tarjetas */
+.grid-caracteristicas {
+    margin-top: 4rem; 
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr)); 
+    gap: 1.5rem; 
+}
+
+/* Estilos de la Tarjeta */
+.tarjeta-caracteristica {
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+}
+
+/* Efectos Hover de la Tarjeta */
+.tarjeta-caracteristica:hover {
+    border-color: #93c5fd;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Iconos dentro de la tarjeta */
+.contenedor-icono {
+    margin-bottom: 1rem; 
+    display: flex;
+    height: 3rem; 
+    width: 3rem; 
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem; 
+    background-color: #eff6ff; 
+}
+
+.icono {
+    color: #2563eb; 
+}
+
+/* Textos de la tarjeta */
+.titulo-caracteristica {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+}
+
+.descripcion-caracteristica {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.625;
+    color: #6b7280;
+    margin-bottom: 0;
+}
+
+/* Media Queries para Responsive (Equivalentes a sm, md y lg en Tailwind) */
+@media (min-width: 640px) {
+    .grid-caracteristicas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 768px) {
+    .titulo {
+        font-size: 2.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .seccion-caracteristicas {
+        padding: 7rem 2rem;
+
+        .grid-caracteristicas {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+}

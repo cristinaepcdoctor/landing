@@ -1,1 +1,132 @@
-/* Security styles */
+/* Estructura general */
+.seccion-seguridad {
+    background-color: var(--background, #ffffff);
+    padding: 5rem 1rem;
+}
+
+.contenedor-principal {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80rem;  
+}
+
+/* Cabecera */
+.cabecera {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 42rem;  
+    text-align: center;
+}
+
+.subtitulo {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.75;
+    font-weight: 500;
+    color: #6b7280;
+}
+
+.titulo {
+    margin-top: 0.75rem;
+    font-family: serif;
+    font-size: 1.875rem; 
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: var(--foreground, #0f172a);
+    text-wrap: balance;
+}
+
+.descripcion {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.625;
+    color: var(--muted-foreground, #64748b);
+    text-wrap: pretty;
+}
+
+/* Estadísticas */
+.grid-estadisticas {
+    margin: 4rem auto 0;
+    display: grid;
+    max-width: 56rem; 
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.tarjeta-estadistica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.75rem;
+    border: 1px solid var(--border, #e2e8f0);
+    background-color: var(--card, #ffffff);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.tarjeta-estadistica .valor {
+    font-size: 1.875rem; /* 3xl */
+    font-weight: 700;
+    color: var(--primary, #0f172a);
+}
+
+.tarjeta-estadistica .etiqueta {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--foreground, #0f172a);
+}
+
+.tarjeta-estadistica .detalle {
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: var(--muted-foreground, #64748b);
+}
+
+/* Caja de confianza */
+.caja-confianza {
+    margin: 4rem auto 0;
+    max-width: 48rem; 
+    border-radius: 0.75rem;
+    border: 1px solid var(--border, #e2e8f0);
+    background-color: var(--card, #ffffff);
+    padding: 2rem;
+}
+
+.titulo-confianza {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--card-foreground, #0f172a);
+    margin: 0;
+}
+
+.texto-confianza {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.625;
+    color: var(--muted-foreground, #64748b);
+}
+
+/* Media queries para pantallas grandes (lg y md de Tailwind) */
+@media (min-width: 768px) {
+    .titulo {
+        font-size: 2.25rem;  
+    }
+    .tarjeta-estadistica .valor {
+        font-size: 2.25rem;  
+    }
+}
+
+@media (min-width: 1024px) {
+    .seccion-seguridad {
+        padding: 7rem 2rem;  
+    }
+    .grid-estadisticas {
+        grid-template-columns: repeat(4, minmax(0, 1fr)); 
+    }
+    .caja-confianza {
+        padding: 2.5rem;  
+    }
+}
