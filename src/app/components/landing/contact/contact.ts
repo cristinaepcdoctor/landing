@@ -2,12 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-cta-section',
+  selector: 'app-contact',
   imports: [CommonModule],
-  templateUrl: './cta-section.html',
-  styleUrl: './cta-section.css',
+  templateUrl: './contact.html',
+  styleUrl: './contact.css',
 })
-export class CtaSection {
+export class Contact {
   ctaPoints = [
     'Sin necesidad de instalación',
     'Soporte técnico incluido',

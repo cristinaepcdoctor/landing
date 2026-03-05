@@ -1,0 +1,186 @@
+/* ========================
+    MASC SECTION - Main Container
+   ======================== */
+.masc-section {
+    background-color: #1a4d6d;
+    padding: 5rem 1rem;
+}
+
+@media (min-width: 1024px) {
+    .masc-section {
+        padding: 7rem 2rem;
+    }
+}
+
+.masc-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80rem;
+}
+
+/* ========================
+    MASC HEADER
+   ======================== */
+.masc-header {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 42rem;
+    text-align: center;
+}
+
+.masc-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.masc-title {
+    margin-top: 0.75rem;
+    font-size: 1.875rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .masc-title {
+        font-size: 2.25rem;
+    }
+}
+
+.masc-subtitle {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.625;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ========================
+    MASC GRID & CARDS
+   ======================== */
+.masc-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+@media (min-width: 1024px) {
+    .masc-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.masc-card {
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+    .masc-card {
+        padding: 2rem;
+    }
+}
+
+.masc-card:hover {
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================
+    MASC ICONS & TEXT
+   ======================== */
+.masc-icon-wrapper {
+    display: flex;
+    height: 3rem;
+    width: 3rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 1.25rem;
+}
+
+.masc-icon {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    display: block;
+    line-height: 1;
+}
+
+.masc-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+}
+
+.masc-card-description {
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.625;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ========================
+    MASC LIST ITEMS
+   ======================== */
+.masc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+    list-style: none;
+    padding: 0;
+}
+
+.masc-list-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.masc-list-bullet {
+    flex-shrink: 0;
+    height: 0.375rem;
+    width: 0.375rem;
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* ========================
+    MASC CTA BUTTON
+   ======================== */
+.masc-cta-container {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.masc-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.375rem;
+    background-color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a4d6d;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.masc-button:hover {
+    background-color:  #c5c6ca;
+}
+
+.masc-button-icon {
+    font-size: 1rem;
+}

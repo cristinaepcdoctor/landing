@@ -2,12 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-masc-section',
+  selector: 'app-masc',
   imports: [CommonModule],
-  templateUrl: './masc-section.html',
-  styleUrl: './masc-section.css',
+  templateUrl: './masc.html',
+  styleUrl: './masc.css',
 })
-export class MascSection {
+export class Masc {
   mascFeatures = [
     {
       icon: 'handshake',

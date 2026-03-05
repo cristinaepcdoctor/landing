@@ -20,6 +20,7 @@ export class Header {
     { href: '#ventajas', label: 'Ventajas' },
     { href: '#masc', label: 'MASC' },
     { href: '#seguridad', label: 'Seguridad' },
+    { href: '#faq', label: 'FAQ' },
     { href: '#contacto', label: 'Contacto' },
   ];
 }
