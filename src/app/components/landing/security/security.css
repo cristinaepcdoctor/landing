@@ -64,6 +64,12 @@
     text-align: center;
 }
 
+.tarjeta-estadistica:hover {
+    border-color: var(--primary, #0f172a);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
 .tarjeta-estadistica .valor {
     font-size: 1.875rem; /* 3xl */
     font-weight: 700;
@@ -91,6 +97,12 @@
     border: 1px solid var(--border, #e2e8f0);
     background-color: var(--card, #ffffff);
     padding: 2rem;
+}
+
+.caja-confianza:hover {
+    border-color: var(--primary, #0f172a);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .titulo-confianza {
