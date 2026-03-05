@@ -4,11 +4,13 @@ import { Header } from './components/landing/header/header';
 import { Hero } from './components/landing/hero/hero';
 import { Features } from './components/landing/features/features';
 import { MascSection } from './components/landing/masc-section/masc-section';
+import { CtaSection } from './components/landing/cta-section/cta-section';
+import { Footer } from './components/landing/footer/footer';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Header, Features, Hero, MascSection],
+  imports: [Header, Features, Hero, MascSection, CtaSection, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
