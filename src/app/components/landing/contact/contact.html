@@ -1,45 +1,32 @@
-<section id="contacto" class="bg-gray-50 px-4 py-20 lg:px-8 lg:py-28">
-  <div class="mx-auto max-w-4xl text-center">
-    <h2 class="text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">
+<section id="contacto" class="contact-section">
+  <div class="contact-container">
+    <h2 class="contact-title">
       Empieza a gestionar tu despacho de forma eficiente hoy mismo
     </h2>
-    <p class="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-gray-500">
+    <p class="contact-subtitle">
       Únete a los despachos profesionales que ya confían en LexFolder para gestionar sus
       expedientes, comunicaciones y procedimientos de resolución de disputas.
     </p>
 
-    <!-- Checkmarks -->
-    <ul
-      class="mx-auto mt-8 flex max-w-xl flex-wrap items-center justify-center gap-x-6 gap-y-3"
-      role="list"
-    >
-      <li *ngFor="let point of ctaPoints" class="flex items-center gap-2 text-sm text-gray-500">
-        <span class="material-icons text-base cta-blue-text">check_circle</span>
+    <ul class="contact-list" role="list">
+      <li *ngFor="let point of contactPoints" class="contact-list__item">
+        <span class="material-icons contact-list__icon">check_circle</span>
         {{ point }}
       </li>
     </ul>
 
-    <!-- Botones CTA -->
-    <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-      <a
-        href="https://lexfolder.net"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex w-full items-center justify-center gap-2 rounded-md cta-blue-bg px-6 py-3 text-base font-semibold text-white sm:w-auto"
-      >
+    <div class="contact-buttons">
+      <a href="https://lexfolder.net" target="_blank" rel="noopener noreferrer"
+        class="contact-button contact-button--primary">
         Solicitar demo gratuita
-        <span class="material-icons text-base">arrow_forward</span>
+        <span class="material-icons contact-button__icon">arrow_forward</span>
       </a>
-      <a
-        href="https://lexfolder.net"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex w-full items-center justify-center rounded-md border border-gray-300 px-6 py-3 text-base font-semibold text-gray-700 hover:bg-gray-100 sm:w-auto"
-      >
+      <a href="https://lexfolder.net/planes" target="_blank" rel="noopener noreferrer"
+        class="contact-button contact-button--secondary">
         Ver planes y precios
       </a>
     </div>
 
-    <p class="mt-6 text-sm text-gray-400">Sin compromiso. Cancela cuando quieras.</p>
+    <p class="contact-footer-text">Sin compromiso. Cancela cuando quieras.</p>
   </div>
 </section>

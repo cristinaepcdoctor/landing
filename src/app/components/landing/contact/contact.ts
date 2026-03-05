@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './contact.css',
 })
 export class Contact {
-  ctaPoints = [
+  contactPoints = [
     'Sin necesidad de instalación',
     'Soporte técnico incluido',
     'Migración asistida de datos',
