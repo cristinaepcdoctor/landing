@@ -1,0 +1,67 @@
+<footer class="footer border-t border-blue-800">
+  <div class="mx-auto max-w-7xl px-4 py-12 lg:px-8 lg:py-16">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+      <!-- Columna 1: Logo y descripción -->
+      <div>
+        <a href="/" class="flex items-center gap-2" aria-label="LexFolder">
+          <img
+            src="/logo-lexfolder.png"
+            alt="LexFolder logo"
+            class="h-8 w-8 rounded-lg object-contain"
+          />
+          <span class="text-lg font-bold text-white">LexFolder</span>
+        </a>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-blue-200">
+          Plataforma de gestión documental y procedimientos MASC.
+        </p>
+        <div class="mt-4 flex flex-col gap-2 text-sm text-blue-200">
+          <span>
+            <span class="material-icons align-middle mr-1">phone</span>
+            Teléfono: +34 635 64 64 55
+          </span>
+          <span>
+            <span class="material-icons align-middle mr-1">mail</span>
+            Email: soporte@lexfolder.es
+          </span>
+        </div>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <img
+            src="/conformidad-eidas.png"
+            alt="Conformidad EIDAS"
+            class="h-16 w-16 object-contain"
+          />
+          <img src="/conformidad-ens.png" alt="Conformidad ENS" class="h-16 w-16 object-contain" />
+          <img src="/grpd-logo.png" alt="GRPD" class="h-16 w-16 object-contain" />
+          <img src="/iso27001.png" alt="ISO 27001" class="h-16 w-16 object-contain" />
+        </div>
+      </div>
+
+      <!-- Columnas 2 y 3: Links -->
+      <nav *ngFor="let section of footerSections" [attr.aria-label]="section.title">
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-white">
+          {{ section.title }}
+        </h3>
+        <ul class="mt-4 flex flex-col gap-2" role="list">
+          <li *ngFor="let link of section.links">
+            <a
+              [href]="link.href"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm text-blue-200 transition-colors hover:text-white"
+            >
+              {{ link.label }}
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Bottom -->
+    <div class="mt-12 border-t border-white/20 pt-8 text-center">
+      <p class="text-sm text-blue-300">
+        © {{ currentYear }} LexFolder. Todos los derechos reservados. Software de gestión para
+        despachos profesionales.
+      </p>
+    </div>
+  </div>
+</footer>
