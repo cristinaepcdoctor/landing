@@ -1,3 +1,29 @@
-<section id="faq">
-    <p>FAQ</p>
+<section id="faq" class="seccion-faq">
+    <div class="contenedor-faq">
+        
+        <div class="cabecera-faq">
+            <p class="subtitulo-faq">
+                Preguntas frecuentes
+            </p>
+            <h2 class="titulo-faq">
+                Resolvemos tus dudas
+            </h2>
+            <p class="descripcion-faq">
+                Todo lo que necesitas saber sobre LexFolder y la gestion de tu
+                despacho profesional.
+            </p>
+        </div>
+
+        <div class="lista-faq">
+            <details *ngFor="let faq of faqs" class="item-faq">
+                <summary class="pregunta-faq">
+                    {{ faq.question }}
+                </summary>
+                <div class="respuesta-faq">
+                    <p>{{ faq.answer }}</p>
+                </div>
+            </details>
+        </div>
+
+    </div>
 </section>

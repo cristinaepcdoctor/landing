@@ -3,12 +3,12 @@ import { Meta, Title } from '@angular/platform-browser';
 import { Header } from './components/landing/header/header';
 import { Hero } from './components/landing/hero/hero';
 import { Features } from './components/landing/features/features';
-import { Footer } from './components/landing/footer/footer';
 import { Advantages } from './components/landing/advantages/advantages';
 import { Masc } from './components/landing/masc/masc';
 import { Security } from './components/landing/security/security';
 import { Contact } from './components/landing/contact/contact';
 import { FAQ } from './components/landing/faq/faq';
+import { Footer } from './components/landing/footer/footer';
 
 @Component({
   selector: 'app-root',
