@@ -1,32 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { RouterOutlet } from '@angular/router';
 import { Header } from './components/landing/header/header';
-import { Hero } from './components/landing/hero/hero';
-import { Features } from './components/landing/features/features';
-import { Advantages } from './components/landing/advantages/advantages';
-import { Masc } from './components/landing/masc/masc';
-import { Security } from './components/landing/security/security';
-import { Contact } from './components/landing/contact/contact';
-import { FAQ } from './components/landing/faq/faq';
 import { Footer } from './components/landing/footer/footer';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Header, Hero, Features, Masc, Advantages, Security, Contact, FAQ, Footer],
+  imports: [RouterOutlet, Header, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App implements OnInit {
   constructor(
-    //Meta y Title son servicios de Angular que permiten modificar los meta tags del <head> en tiempo de ejecución, lo que es especialmente útil con SSR para mejorar el SEO y la apariencia en redes.
     private title: Title,
     private meta: Meta,
   ) {}
 
   ngOnInit() {
     this.title.setTitle('LexFolder | Software de gestión para despachos de abogados');
-
     this.meta.updateTag({
       name: 'description',
       content:

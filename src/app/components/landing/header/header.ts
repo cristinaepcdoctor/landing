@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [RouterLink],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
@@ -21,6 +21,6 @@ export class Header {
     { href: '#masc', label: 'MASC' },
     { href: '#seguridad', label: 'Seguridad' },
     { href: '#faq', label: 'FAQ' },
-    { href: '#contacto', label: 'Contacto' },
+    { href: '/contacto', label: 'Contacto' },
   ];
 }
