@@ -1,6 +1,6 @@
 <section id="faq" class="seccion-faq">
     <div class="contenedor-faq">
-        
+
         <div class="cabecera-faq">
             <p class="subtitulo-faq">
                 Preguntas frecuentes
@@ -15,7 +15,8 @@
         </div>
 
         <div class="lista-faq">
-            <details *ngFor="let faq of faqs" class="item-faq">
+            @for (faq of faqs; track $index) {
+            <details class="item-faq">
                 <summary class="pregunta-faq">
                     {{ faq.question }}
                 </summary>
@@ -23,6 +24,7 @@
                     <p>{{ faq.answer }}</p>
                 </div>
             </details>
+            }
         </div>
 
     </div>

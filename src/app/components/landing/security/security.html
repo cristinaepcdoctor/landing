@@ -14,11 +14,13 @@
         </div>
 
         <div class="grid-estadisticas">
-            <div *ngFor="let stat of stats" class="tarjeta-estadistica">
-                <span class="valor">{{ stat.value }}</span>
-                <span class="etiqueta">{{ stat.label }}</span>
-                <span class="detalle">{{ stat.description }}</span>
-            </div>
+            @for (stat of stats; track $index) {
+                <div class="tarjeta-estadistica">
+                    <span class="valor">{{ stat.value }}</span>
+                    <span class="etiqueta">{{ stat.label }}</span>
+                    <span class="detalle">{{ stat.description }}</span>
+                </div>
+            }
         </div>
 
         <div class="caja-confianza">

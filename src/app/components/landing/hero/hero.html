@@ -47,7 +47,8 @@
 
         <!-- Trust signals -->
         <div class="hero-signals">
-            <div *ngFor="let signal of trustSignals" class="hero-signal">
+            @for (signal of trustSignals; track $index) {
+            <div class="hero-signal">
                 <div class="hero-signal__icon-wrapper">
                     <span class="material-icons hero-signal__icon">{{ signal.icon }}</span>
                 </div>
@@ -56,6 +57,8 @@
                     <p class="hero-signal__text">{{ signal.text }}</p>
                 </div>
             </div>
+            }
+
         </div>
     </div>
 </section>
