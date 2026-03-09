@@ -9,10 +9,12 @@
     </p>
 
     <ul class="contact-list" role="list">
-      <li *ngFor="let point of contactPoints" class="contact-list__item">
+      @for (point of contactPoints ; track $index) {
+      <li  class="contact-list__item">
         <span class="material-icons contact-list__icon">check_circle</span>
         {{ point }}
       </li>
+      }
     </ul>
 
     <div class="contact-buttons">

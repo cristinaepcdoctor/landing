@@ -13,22 +13,19 @@
     </div>
 
     <div class="grid-caracteristicas">
-      <article *ngFor="let feature of features" class="tarjeta-caracteristica">
-        
+      @for (feature of features; track $index) {
+      <article class="tarjeta-caracteristica">
         <div class="contenedor-icono">
           <span class="material-icons icono">{{ feature.icon }}</span>
         </div>
-        
         <h3 class="titulo-caracteristica">
           {{ feature.title }}
         </h3>
-        
         <p class="descripcion-caracteristica">
           {{ feature.description }}
         </p>
-        
       </article>
+    }
     </div>
-    
   </div>
 </section>

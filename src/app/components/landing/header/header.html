@@ -1,6 +1,5 @@
 <header class="header">
   <nav class="header__nav" aria-label="Navegación principal">
-    <!-- Logo -->
     <a href="/" class="header__logo" aria-label="LexFolder - Inicio">
       <div class="header__logo-icon">
         <img src="/logo-lexfolder.png" alt="LexFolder Logo" class="header__logo-image">
@@ -8,16 +7,16 @@
       <span class="header__logo-name">LexFolder</span>
     </a>
 
-    <!-- Nav escritorio -->
     <ul class="header__nav-list" role="list">
-      <li *ngFor="let link of navLinks">
-        <a [href]="link.href" class="header__nav-link">
-          {{ link.label }}
-        </a>
-      </li>
+      @for (link of navLinks; track $index) {
+        <li>
+          <a [href]="link.href" class="header__nav-link">
+            {{ link.label }}
+          </a>
+        </li>
+      }
     </ul>
 
-    <!-- Botones escritorio -->
     <div class="header__actions">
       <a href="https://lexfolder.net/login" target="_blank" rel="noopener noreferrer" class="header__action-link">
         Iniciar sesión
@@ -27,22 +26,27 @@
       </a>
     </div>
 
-    <!-- Botón menú móvil -->
     <button class="header__mobile-toggle" (click)="toggleMenu()" [attr.aria-expanded]="mobileOpen"
       aria-controls="mobile-menu" [attr.aria-label]="mobileOpen ? 'Cerrar menú' : 'Abrir menú'">
-      <span class="material-icons" *ngIf="!mobileOpen">menu</span>
-      <span class="material-icons" *ngIf="mobileOpen">close</span>
+      @if (!mobileOpen) {
+        <span class="material-icons">menu</span>
+      } 
+      @else{
+        <span class="material-icons">close</span>
+      }
     </button>
   </nav>
 
-  <!-- Menú móvil -->
-  <div *ngIf="mobileOpen" id="mobile-menu" class="header__mobile-menu">
+  @if (mobileOpen) {
+  <div id="mobile-menu" class="header__mobile-menu">
     <ul class="header__mobile-list" role="list">
-      <li *ngFor="let link of navLinks">
-        <a [href]="link.href" class="header__mobile-link" (click)="toggleMenu()">
-          {{ link.label }}
-        </a>
-      </li>
+      @for (link of navLinks; track $index) {
+        <li>
+          <a [href]="link.href" class="header__mobile-link" (click)="toggleMenu()">
+            {{ link.label }}
+          </a>
+        </li>
+      }
     </ul>
     <div class="header__mobile-actions">
       <a href="https://lexfolder.net" target="_blank" rel="noopener noreferrer" class="header__mobile-action-link">
@@ -53,4 +57,5 @@
       </a>
     </div>
   </div>
+  }
 </header>

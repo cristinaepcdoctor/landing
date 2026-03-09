@@ -14,18 +14,22 @@
 
         <!-- Benefits grid -->
         <div class="advantages-grid">
-            <article *ngFor="let benefit of benefits" class="advantage-card">
+            @for (benefit of benefits; track $index) {
+            <article class="advantage-card">
                 <div class="advantage-icon-wrapper">
                     <span class="material-icons advantage-icon">{{ benefit.icon }}</span>
                 </div>
                 <div>
                     <h3 class="advantage-title-card">{{ benefit.title }}</h3>
                     <p class="advantage-description">{{ benefit.description }}</p>
-                    <span *ngFor="let tag of benefit.highlights" class="advantage-tag">
+                    @for (tag of benefit.highlights; track $index) {
+                    <span class="advantage-tag">
                         {{ tag }}
                     </span>
+                    }
                 </div>
             </article>
+            }  
         </div>
     </div>
 </section>

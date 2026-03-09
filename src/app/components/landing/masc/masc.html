@@ -14,7 +14,8 @@
     </div>
 
     <div class="masc-grid">
-      <article *ngFor="let service of mascFeatures" class="masc-card">
+      @for (service of mascFeatures; track $index) {
+      <article class="masc-card">
         <div class="masc-icon-wrapper">
           <span class="material-icons masc-icon">{{ service.icon }}</span>
         </div>
@@ -25,12 +26,15 @@
           {{ service.description }}
         </p>
         <ul class="masc-list" role="list">
-          <li *ngFor="let detail of service.details" class="masc-list-item">
+          @for (detail of service.details; track $index) {
+          <li class="masc-list-item">
             <span class="masc-list-bullet"></span>
             {{ detail }}
           </li>
+          }
         </ul>
       </article>
+      }
     </div>
 
     <div class="masc-cta-container">
