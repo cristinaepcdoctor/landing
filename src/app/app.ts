@@ -7,7 +7,7 @@ import { Footer } from './components/landing/footer/footer';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Header, RouterOutlet,  Footer],
+  imports: [   Footer],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

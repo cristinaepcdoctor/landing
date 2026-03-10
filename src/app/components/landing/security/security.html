@@ -13,11 +13,11 @@
             </p>
         </div>
 
-        <div class="grid-estadisticas" role="list" aria-label="Estadísticas de seguridad">
+        <div class="grid-estadisticas">
             @for (stat of stats; track $index) {
-                <div class="tarjeta-estadistica" role="listitem">
-                    <span class="valor" aria-label="{{ stat.label }}: {{ stat.value }}">{{ stat.value }}</span>
-                    <span class="etiqueta" aria-hidden="true">{{ stat.label }}</span>
+                <div class="tarjeta-estadistica" aria-label="{{ stat.value }}">
+                    <span class="valor" >{{ stat.value }}</span>
+                    <span class="etiqueta">{{ stat.label }}</span>
                     <span class="detalle">{{ stat.description }}</span>
                 </div>
             }
