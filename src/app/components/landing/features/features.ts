@@ -1,10 +1,8 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-features',
   standalone: true,
-  imports: [CommonModule],
   templateUrl: './features.html',
   styleUrl: './features.css',
 })
@@ -14,7 +12,7 @@ export class Features {
       icon: 'calendar_today',
       title: 'Calendario y tareas',
       description:
-        'Organiza citas,tas, reuniones y plazos procesales con un calendario integrado. Recibe recordatorios automáticos para no perder ninguna fecha clave.',
+        'Organiza citas, reuniones y plazos procesales con un calendario integrado. Recibe recordatorios automáticos para no perder ninguna fecha clave.',
     },
     {
       icon: 'group',

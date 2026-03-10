@@ -1,9 +1,9 @@
-<section id="caracteristicas" class="seccion-caracteristicas">
+<section id="caracteristicas" class="seccion-caracteristicas" aria-labelledby="features-titulo">
   <div class="contenedor-principal">
     
     <div class="cabecera">
       <p class="subtitulo">Características</p>
-      <h2 class="titulo">
+      <h2 id="features-titulo" class="titulo">
         Todo lo que necesita tu despacho profesional
       </h2>
       <p class="descripcion">
@@ -14,8 +14,8 @@
 
     <div class="grid-caracteristicas">
       @for (feature of features; track $index) {
-      <article class="tarjeta-caracteristica">
-        <div class="contenedor-icono">
+      <article class="tarjeta-caracteristica" aria-label="{{ feature.title }}">
+        <div class="contenedor-icono" aria-hidden="true">
           <span class="material-icons icono">{{ feature.icon }}</span>
         </div>
         <h3 class="titulo-caracteristica">

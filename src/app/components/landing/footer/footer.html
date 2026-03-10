@@ -1,37 +1,35 @@
-<footer class="footer">
+<footer class="footer" role="contentinfo">
   <div class="footer-container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="/" class="brand-link" aria-label="LexFolder">
+        <a href="/" class="brand-link" aria-label="LexFolder - Ir a la página de inicio">
           <img
             src="/logo-lexfolder.png"
-            alt="LexFolder logo"
+            alt=""
+            aria-hidden="true"
             class="brand-logo"
           />
-          <span class="brand-name">LexFolder</span>
+          <span aria-hidden="true" class="brand-name">LexFolder</span>
         </a>
         <p class="brand-description">
           Plataforma de gestión documental y procedimientos MASC.
         </p>
-        <div class="contact-info">
+        <address class="contact-info" aria-label="Información de contacto">
           <span class="contact-item">
-            <span class="material-icons icon">phone</span>
-            Teléfono: +34 635 64 64 55
+            <span class="material-icons icon" aria-hidden="true">phone</span>
+            <a href="tel:+34635646455" aria-label="Teléfono: +34 635 64 64 55">
+              <span aria-hidden="true">+34 635 64 64 55</span>
+            </a>
           </span>
           <span class="contact-item">
-            <span class="material-icons icon">mail</span>
-            Email: soporte@lexfolder.es
+            <span class="material-icons icon" aria-hidden="true">mail</span>
+            <a href="mailto:soporte@lexfolder.es" aria-label="Email: soporte arroba lexfolder punto es">
+              <span aria-hidden="true">soporte&#64;lexfolder.es</span>
+            </a>
           </span>
-        </div>
-        <div class="certifications">
-          <img
-            src="/conformidad-eidas.png"
-            alt="Certificación de conformidad eIDAS - firma electrónica reconocida"
-            class="cert-logo"
-            width="80"
-            height="40"
-            loading="lazy"
-          />
+        </address>
+        <div class="certifications" aria-label="Certificaciones de seguridad">
+          <img src="/conformidad-eidas.png" alt="Certificación de conformidad eIDAS - firma electrónica reconocida" class="cert-logo" width="80" height="40" loading="lazy" />
           <img src="/conformidad-ens.png" alt="Certificación Esquema Nacional de Seguridad (ENS)" class="cert-logo" width="80" height="40" loading="lazy" />
           <img src="/grpd-logo.png" alt="Cumplimiento RGPD - Reglamento General de Protección de Datos" class="cert-logo" width="80" height="40" loading="lazy" />
           <img src="/iso27001.png" alt="Certificación ISO 27001 - Gestión de seguridad de la información" class="cert-logo" width="80" height="40" loading="lazy" />
@@ -43,16 +41,17 @@
         <h3 class="nav-title">
           {{ section.title }}
         </h3>
-        <ul class="nav-list" role="list">
+        <ul class="nav-list">
           @for(link of section.links; track $index) {
-          <li class="nav-item" role="listitem">
+          <li class="nav-item">
             <a
               [href]="link.href"
               target="_blank"
               rel="noopener noreferrer"
               class="nav-link"
+              [attr.aria-label]="link.label + ' (se abre en nueva pestaña)'"
             >
-              {{ link.label }}
+              <span aria-hidden="true">{{ link.label }}</span>
             </a>
           </li>
           }
@@ -63,7 +62,10 @@
 
     <div class="footer-bottom">
       <p class="copyright">
-        {{ currentYear }} LexFolder. Todos los derechos reservados. Software de gestión para despachos profesionales.
+        <span aria-label="Copyright {{ currentYear }} LexFolder">
+          <span aria-hidden="true">© {{ currentYear }} LexFolder.</span>
+        </span>
+        Todos los derechos reservados. Software de gestión para despachos profesionales.
       </p>
     </div>
   </div>

@@ -1,10 +1,10 @@
-<section id="seguridad" class="seccion-seguridad">
+<section id="seguridad" class="seccion-seguridad" aria-labelledby="seguridad-titulo">
     <div class="contenedor-principal">
         <div class="cabecera">
             <p class="subtitulo">
                 Confianza y seguridad
             </p>
-            <h2 class="titulo">
+            <h2 id="seguridad-titulo" class="titulo">
                 Una plataforma en la que puedes confiar
             </h2>
             <p class="descripcion">
@@ -15,8 +15,8 @@
 
         <div class="grid-estadisticas">
             @for (stat of stats; track $index) {
-                <div class="tarjeta-estadistica">
-                    <span class="valor">{{ stat.value }}</span>
+                <div class="tarjeta-estadistica" aria-label="{{ stat.value }}">
+                    <span class="valor" >{{ stat.value }}</span>
                     <span class="etiqueta">{{ stat.label }}</span>
                     <span class="detalle">{{ stat.description }}</span>
                 </div>

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 interface Benefit {
     icon: string;
@@ -11,7 +10,6 @@ interface Benefit {
 @Component({
     selector: 'app-advantages',
     standalone: true,
-    imports: [CommonModule],
     templateUrl: './advantages.html',
     styleUrl: './advantages.css',
 })

@@ -4,7 +4,7 @@
       <div class="header__logo-icon">
         <img src="/logo-lexfolder.png" alt="LexFolder Logo" class="header__logo-image" />
       </div>
-      <span class="header__logo-name">LexFolder</span>
+      <span aria-hidden="true" class="header__logo-name">LexFolder</span>
     </a>
 
     <ul class="header__nav-list" role="list">
@@ -23,26 +23,28 @@
         target="_blank"
         rel="noopener noreferrer"
         class="header__action-link"
+        aria-label="Iniciar sesión (se abre en nueva pestaña)"
       >
-        Iniciar sesión
+        <span aria-hidden="true">Iniciar sesión</span>
       </a>
       <a
         href="https://lexfolder.net"
         target="_blank"
         rel="noopener noreferrer"
         class="header__action-button"
+        aria-label="Comenzar ahora (se abre en nueva pestaña)"
       >
-        Comenzar ahora
+        <span aria-hidden="true">Comenzar ahora</span>
       </a>
     </div>
 
     <button class="header__mobile-toggle" (click)="toggleMenu()" [attr.aria-expanded]="mobileOpen"
       aria-controls="mobile-menu" [attr.aria-label]="mobileOpen ? 'Cerrar menú' : 'Abrir menú'">
       @if (!mobileOpen) {
-        <span class="material-icons">menu</span>
+        <span class="material-icons" aria-hidden="true">menu</span>
       } 
       @else{
-        <span class="material-icons">close</span>
+        <span class="material-icons" aria-hidden="true">close</span>
       }
     </button>
   </nav>
@@ -59,11 +61,23 @@
       }
     </ul>
     <div class="header__mobile-actions">
-      <a href="https://lexfolder.net" target="_blank" rel="noopener noreferrer" class="header__mobile-action-link">
-        Iniciar sesión
+      <a 
+        href="https://lexfolder.net" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="header__mobile-action-link" 
+        aria-label="Iniciar sesión (se abre en nueva pestaña)"
+      >
+        <span aria-hidden="true">Iniciar sesión</span>
       </a>
-      <a href="https://lexfolder.net" target="_blank" rel="noopener noreferrer" class="header__mobile-action-button">
-        Comenzar ahora
+      <a 
+        href="https://lexfolder.net" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="header__mobile-action-button" 
+        aria-label="Comenzar ahora (se abre en nueva pestaña)"
+      >
+        <span aria-hidden="true">Comenzar ahora</span>
       </a>
     </div>
   </div>
