@@ -1,9 +1,7 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-security',
-    imports: [CommonModule],
     templateUrl: './security.html',
     styleUrl: './security.css',
 })

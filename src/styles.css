@@ -1,3 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+/* ===== ACCESIBILIDAD GLOBAL ===== */
+
+/* Enlace de salto para teclado y lectores de pantalla */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: #1d4ed8;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  z-index: 9999;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+/* Indicador de foco visible en todos los elementos interactivos */
+:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Texto solo para lectores de pantalla (visualmente oculto) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Respetar preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

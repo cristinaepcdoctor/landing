@@ -1,9 +1,8 @@
-<section class="advantages-section" id="ventajas">
+<section class="advantages-section" id="ventajas" aria-labelledby="ventajas-titulo">
     <div class="advantages-container">
-        <!-- Section header -->
         <div class="advantages-header">
-            <p class="advantages-label">Ventajas</p>
-            <h2 class="advantages-title">
+            <p class="advantages-label" aria-hidden="true">Ventajas</p>
+            <h2 id="ventajas-titulo" class="advantages-title">
                 Por qué los despachos profesionales eligen LexFolder
             </h2>
             <p class="advantages-subtitle">
@@ -12,20 +11,17 @@
             </p>
         </div>
 
-        <!-- Benefits grid -->
         <div class="advantages-grid">
             @for (benefit of benefits; track $index) {
-            <article class="advantage-card">
-                <div class="advantage-icon-wrapper">
+            <article class="advantage-card" aria-label="{{ benefit.title }}">
+                <div class="advantage-icon-wrapper" aria-hidden="true">
                     <span class="material-icons advantage-icon">{{ benefit.icon }}</span>
                 </div>
                 <div>
                     <h3 class="advantage-title-card">{{ benefit.title }}</h3>
                     <p class="advantage-description">{{ benefit.description }}</p>
                     @for (tag of benefit.highlights; track $index) {
-                    <span class="advantage-tag">
-                        {{ tag }}
-                    </span>
+                    <span class="advantage-tag">{{ tag }}</span>
                     }
                 </div>
             </article>

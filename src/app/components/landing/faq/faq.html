@@ -1,22 +1,22 @@
-<section id="faq" class="seccion-faq">
+<section id="faq" class="seccion-faq" aria-labelledby="faq-titulo">
     <div class="contenedor-faq">
 
         <div class="cabecera-faq">
-            <p class="subtitulo-faq">
+            <p class="subtitulo-faq" aria-hidden="true">
                 Preguntas frecuentes
             </p>
-            <h2 class="titulo-faq">
+            <h2 id="faq-titulo" class="titulo-faq">
                 Resolvemos tus dudas
             </h2>
             <p class="descripcion-faq">
-                Todo lo que necesitas saber sobre LexFolder y la gestion de tu
+                Todo lo que necesitas saber sobre LexFolder y la gestión de tu
                 despacho profesional.
             </p>
         </div>
 
-        <div class="lista-faq">
+        <div class="lista-faq" role="list">
             @for (faq of faqs; track $index) {
-            <details class="item-faq">
+            <details class="item-faq" role="listitem">
                 <summary class="pregunta-faq">
                     {{ faq.question }}
                 </summary>

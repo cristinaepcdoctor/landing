@@ -1,10 +1,8 @@
-<section id="masc" class="masc-section">
+<section id="masc" class="masc-section" aria-labelledby="masc-titulo">
   <div class="masc-container">
     <div class="masc-header">
-      <p class="masc-label">
-        Especialización MASC
-      </p>
-      <h2 class="masc-title">
+      <p class="masc-label" aria-hidden="true">Especialización MASC</p>
+      <h2 id="masc-titulo" class="masc-title">
         Medios adecuados de solución de controversias
       </h2>
       <p class="masc-subtitle">
@@ -15,20 +13,16 @@
 
     <div class="masc-grid">
       @for (service of mascFeatures; track $index) {
-      <article class="masc-card">
-        <div class="masc-icon-wrapper">
+      <article class="masc-card" aria-label="{{ service.title }}">
+        <div class="masc-icon-wrapper" aria-hidden="true">
           <span class="material-icons masc-icon">{{ service.icon }}</span>
         </div>
-        <h3 class="masc-card-title">
-          {{ service.title }}
-        </h3>
-        <p class="masc-card-description">
-          {{ service.description }}
-        </p>
-        <ul class="masc-list" role="list">
+        <h3 class="masc-card-title">{{ service.title }}</h3>
+        <p class="masc-card-description">{{ service.description }}</p>
+        <ul class="masc-list">
           @for (detail of service.details; track $index) {
           <li class="masc-list-item">
-            <span class="masc-list-bullet"></span>
+            <span class="masc-list-bullet" aria-hidden="true"></span>
             {{ detail }}
           </li>
           }
@@ -38,9 +32,10 @@
     </div>
 
     <div class="masc-cta-container">
-      <a href="https://lexfolder.net" target="_blank" rel="noopener noreferrer" class="masc-button">
+      <a href="https://lexfolder.net" target="_blank" rel="noopener noreferrer" class="masc-button"
+         aria-label="Descubrir herramientas MASC de LexFolder (se abre en nueva pestaña)">
         Descubrir herramientas MASC
-        <span class="material-icons masc-button-icon">arrow_forward</span>
+        <span class="material-icons masc-button-icon" aria-hidden="true">arrow_forward</span>
       </a>
     </div>
   </div>

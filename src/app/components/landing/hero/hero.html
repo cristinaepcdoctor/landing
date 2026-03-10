@@ -1,40 +1,38 @@
-<section class="hero-section">
-    <!-- Subtle geometric background -->
-    <div class="hero-background">
+<section class="hero-section" aria-labelledby="hero-titulo">
+    <div class="hero-background" aria-hidden="true">
         <div class="hero-background__circle hero-background__circle--1"></div>
         <div class="hero-background__circle hero-background__circle--2"></div>
         <div class="hero-background__circle hero-background__circle--3"></div>
     </div>
 
-    <div class="hero-container">
+    <div class="hero-container" id="contenido-principal">
         <div class="hero-content">
-            <!-- Eyebrow -->
             <p class="hero-eyebrow">
-                <svg class="hero-eyebrow__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="hero-eyebrow__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    aria-hidden="true" focusable="false">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
                 Plataforma segura y conforme al RGPD
             </p>
 
-            <!-- H1 - Primary SEO target -->
-            <h1 class="hero-title">
+            <h1 id="hero-titulo" class="hero-title">
                 Software de gestión integral para despachos de abogados
             </h1>
 
-            <!-- Subheadline with secondary keywords -->
             <p class="hero-subtitle">
                 Gestiona tu despacho profesional con eficacia desde cualquier lugar.
                 Gestión documental, videoconferencias, firma electrónica, facturación
                 Veri*Factu y resolución de disputas MASC en una sola plataforma.
             </p>
 
-            <!-- CTA Buttons -->
             <div class="hero-buttons">
                 <a href="https://lexfolder.net" target="_blank" rel="noopener noreferrer"
-                    class="hero-button hero-button--primary">
+                    class="hero-button hero-button--primary"
+                    aria-label="Comenzar prueba gratuita de LexFolder (se abre en nueva pestaña)">
                     Comenzar prueba gratuita
-                    <svg class="hero-button__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="hero-button__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        aria-hidden="true" focusable="false">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
@@ -45,11 +43,11 @@
             </div>
         </div>
 
-        <!-- Trust signals -->
-        <div class="hero-signals">
+        <!-- Trust signals: div neutro para no crear rol semántico extra -->
+        <div class="hero-signals" aria-label="Indicadores de confianza">
             @for (signal of trustSignals; track $index) {
             <div class="hero-signal">
-                <div class="hero-signal__icon-wrapper">
+                <div class="hero-signal__icon-wrapper" aria-hidden="true">
                     <span class="material-icons hero-signal__icon">{{ signal.icon }}</span>
                 </div>
                 <div>
@@ -58,7 +56,6 @@
                 </div>
             </div>
             }
-
         </div>
     </div>
 </section>
