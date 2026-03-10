@@ -54,19 +54,20 @@
 /* La pregunta (El trigger) */
 .pregunta-faq {
     position: relative; /* Necesario para posicionar la flecha */
-    display: block; /* Evitamos flexbox para no romper la accesibilidad */
     padding: 1rem 2rem 1rem 0; /* El 2rem a la derecha evita que el texto pise la flecha */
     font-size: 1rem; 
     font-weight: 500;
     color: var(--foreground, #0f172a);
     cursor: pointer;
     text-align: left;
-    list-style: none; /* Oculta la flecha nativa */
+    /* Eliminados display: block y list-style: none para mantener la accesibilidad semántica */
 }
 
-/* Oculta la flecha por defecto en Safari/Chrome antiguos */
+/* Forma accesible de ocultar la flecha por defecto en todos los navegadores */
+.pregunta-faq::marker,
 .pregunta-faq::-webkit-details-marker {
     display: none;
+    content: "";
 }
 
 /* Flecha dibujada visualmente con CSS (El lector no la lee porque content está vacío) */
@@ -95,17 +96,19 @@
     font-size: 0.875rem;  
     line-height: 1.625;  
     color: var(--muted-foreground, #64748b);
-    animation: deslizarAbajo 0.2s ease-in-out;
+    /* Usamos forwards para asegurar el estado final y que el lector no lo pierda */
+    animation: deslizarAbajo 0.2s ease-in-out forwards;
 }
 
 .respuesta-faq p {
     margin: 0;
 }
 
-/* Animación suave al abrir la respuesta */
+/* Animación suave ajustada para lectores de pantalla */
 @keyframes deslizarAbajo {
     from {
-        opacity: 0;
+        /* Evitamos opacity: 0 absoluto para que el lector no lo descarte al vuelo */
+        opacity: 0.01; 
         transform: translateY(-5px);
     }
     to {

@@ -2,32 +2,26 @@
     <div class="contenedor-faq">
 
         <div class="cabecera-faq">
-            <p class="subtitulo-faq">
-                Preguntas frecuentes
-            </p>
-            <h2 id="faq-titulo" class="titulo-faq">
-                Resolvemos tus dudas
-            </h2>
+            <p class="subtitulo-faq">Preguntas frecuentes</p>
+            <h2 id="faq-titulo" class="titulo-faq">Resolvemos tus dudas</h2>
             <p class="descripcion-faq">
                 Todo lo que necesitas saber sobre LexFolder y la gestión de tu
                 despacho profesional.
             </p>
         </div>
 
-        <ul class="lista-faq">
+        <div class="lista-faq">
             @for (faq of faqs; track $index) {
-            <li class="item-faq-wrapper">
                 <details class="item-faq">
                     <summary class="pregunta-faq">
-                        {{ faq.question }}
+                        <span>{{ faq.question }}</span>
                     </summary>
                     <div class="respuesta-faq">
                         <p>{{ faq.answer }}</p>
                     </div>
                 </details>
-            </li>
             }
-        </ul>
+        </div>
 
     </div>
 </section>
