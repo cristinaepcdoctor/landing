@@ -2,7 +2,7 @@
     <div class="contenedor-faq">
 
         <div class="cabecera-faq">
-            <p class="subtitulo-faq" aria-hidden="true">
+            <p class="subtitulo-faq">
                 Preguntas frecuentes
             </p>
             <h2 id="faq-titulo" class="titulo-faq">
@@ -14,18 +14,20 @@
             </p>
         </div>
 
-        <div class="lista-faq" role="list">
+        <ul class="lista-faq">
             @for (faq of faqs; track $index) {
-            <details class="item-faq" role="listitem">
-                <summary class="pregunta-faq">
-                    {{ faq.question }}
-                </summary>
-                <div class="respuesta-faq">
-                    <p>{{ faq.answer }}</p>
-                </div>
-            </details>
+            <li class="item-faq-wrapper">
+                <details class="item-faq">
+                    <summary class="pregunta-faq">
+                        {{ faq.question }}
+                    </summary>
+                    <div class="respuesta-faq">
+                        <p>{{ faq.answer }}</p>
+                    </div>
+                </details>
+            </li>
             }
-        </div>
+        </ul>
 
     </div>
 </section>

@@ -12,7 +12,7 @@ export class Features {
       icon: 'calendar_today',
       title: 'Calendario y tareas',
       description:
-        'Organiza citas,tas, reuniones y plazos procesales con un calendario integrado. Recibe recordatorios automáticos para no perder ninguna fecha clave.',
+        'Organiza citas, reuniones y plazos procesales con un calendario integrado. Recibe recordatorios automáticos para no perder ninguna fecha clave.',
     },
     {
       icon: 'group',

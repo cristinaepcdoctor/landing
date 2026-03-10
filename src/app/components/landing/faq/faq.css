@@ -53,16 +53,15 @@
 
 /* La pregunta (El trigger) */
 .pregunta-faq {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
+    position: relative; /* Necesario para posicionar la flecha */
+    display: block; /* Evitamos flexbox para no romper la accesibilidad */
+    padding: 1rem 2rem 1rem 0; /* El 2rem a la derecha evita que el texto pise la flecha */
     font-size: 1rem; 
     font-weight: 500;
     color: var(--foreground, #0f172a);
     cursor: pointer;
     text-align: left;
-    list-style: none;  
+    list-style: none; /* Oculta la flecha nativa */
 }
 
 /* Oculta la flecha por defecto en Safari/Chrome antiguos */
@@ -70,12 +69,19 @@
     display: none;
 }
 
-/* Crear una flecha personalizada a la derecha */
+/* Flecha dibujada visualmente con CSS (El lector no la lee porque content está vacío) */
 .pregunta-faq::after {
-    content: "▼";
-    font-size: 0.75rem;
+    content: ""; /* Importante: vacío */
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    margin-top: -3px; /* Centrado vertical */
+    /* Dibujamos un triángulo con bordes */
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid var(--muted-foreground, #64748b);
     transition: transform 0.2s ease-in-out;
-    color: var(--muted-foreground, #64748b);
+    transform-origin: center;
 }
 
 /* Animar la flecha cuando el acordeón está abierto */

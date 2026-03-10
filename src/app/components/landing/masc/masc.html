@@ -1,7 +1,7 @@
 <section id="masc" class="masc-section" aria-labelledby="masc-titulo">
   <div class="masc-container">
     <div class="masc-header">
-      <p class="masc-label" aria-hidden="true">Especialización MASC</p>
+      <p class="masc-label">Especialización MASC</p>
       <h2 id="masc-titulo" class="masc-title">
         Medios adecuados de solución de controversias
       </h2>
@@ -19,9 +19,10 @@
         </div>
         <h3 class="masc-card-title">{{ service.title }}</h3>
         <p class="masc-card-description">{{ service.description }}</p>
-        <ul class="masc-list">
+        
+        <ul class="masc-list" role="presentation">
           @for (detail of service.details; track $index) {
-          <li class="masc-list-item">
+          <li class="masc-list-item" role="presentation">
             <span class="masc-list-bullet" aria-hidden="true"></span>
             {{ detail }}
           </li>
@@ -34,7 +35,7 @@
     <div class="masc-cta-container">
       <a href="https://lexfolder.net" target="_blank" rel="noopener noreferrer" class="masc-button"
         aria-label="Descubrir herramientas MASC de LexFolder (se abre en nueva pestaña)">
-        Descubrir herramientas MASC
+        <span aria-hidden="true">Descubrir herramientas MASC</span>
         <span class="material-icons masc-button-icon" aria-hidden="true">arrow_forward</span>
       </a>
     </div>
