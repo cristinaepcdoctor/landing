@@ -43,6 +43,28 @@
               }
             </div>
 
+            <!-- Apellido -->
+            <div class="flex flex-col gap-1">
+              <label for="lastName" class="text-sm font-medium text-gray-700">
+                Apellido <span class="text-red-500" aria-hidden="true">*</span>
+                <span class="sr-only">(obligatorio)</span>
+              </label>
+              <input
+                id="lastName"
+                type="text"
+                formControlName="lastName"
+                placeholder="Tu apellido"
+                autocomplete="family-name"
+                [attr.aria-required]="true"
+                [attr.aria-invalid]="form.get('lastName')?.invalid && form.get('lastName')?.touched"
+                aria-describedby="lastName-error"
+                class="rounded-md border border-gray-300 px-4 py-2.5 text-sm text-gray-900 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+              />
+              @if (form.get('lastName')?.invalid && form.get('lastName')?.touched) {
+                <p id="lastName-error" class="text-xs text-red-500" role="alert">El apellido es obligatorio.</p>
+              }
+            </div>
+
             <!-- Email -->
             <div class="flex flex-col gap-1">
               <label for="email" class="text-sm font-medium text-gray-700">
@@ -79,12 +101,12 @@
             </div>
 
             <!-- Empresa -->
-            <div class="flex flex-col gap-1">
-              <label for="company" class="text-sm font-medium text-gray-700">Despacho / Empresa</label>
+            <div class="flex flex-col gap-1 sm:col-span-2">
+              <label for="empresa" class="text-sm font-medium text-gray-700">Despacho / Empresa</label>
               <input
-                id="company"
+                id="empresa"
                 type="text"
-                formControlName="company"
+                formControlName="empresa"
                 placeholder="Nombre de tu despacho"
                 autocomplete="organization"
                 class="rounded-md border border-gray-300 px-4 py-2.5 text-sm text-gray-900 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"

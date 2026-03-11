@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -18,9 +19,10 @@ export class Contact {
 
   form = this.fb.group({
     name: ['', [Validators.required, Validators.minLength(2)]],
+    lastName: ['', [Validators.required, Validators.minLength(2)]],
     email: ['', [Validators.required, Validators.email]],
     phone: ['', [Validators.pattern(/^\+?\d{7,15}$/)]],
-    company: [''],
+    empresa: [''],
     message: ['', [Validators.required, Validators.minLength(10)]],
   });
 
@@ -30,7 +32,7 @@ export class Contact {
     this.sending.set(true);
     this.error.set(false);
 
-    const endpoint = 'https://api.lexfolder.com/contact'; // Cambiar esto cuando tengamos el endpoint real
+    const endpoint = `${environment.apiUrl}/contact-form`;
 
     this.http.post(endpoint, this.form.value).subscribe({
       next: () => {
