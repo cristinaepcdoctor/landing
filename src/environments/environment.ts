@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:5001', // URL del backend en local (ajustar puerto si es necesario)
+  baseUrl: 'http://localhost:5001/medixpert-bbd4e/europe-west1/api', // URL del backend en local (ajustar puerto si es necesario)
 };
