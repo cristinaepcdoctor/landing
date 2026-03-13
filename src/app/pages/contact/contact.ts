@@ -32,7 +32,7 @@ export class Contact {
     this.sending.set(true);
     this.error.set(false);
 
-    const endpoint = `${environment.baseUrl}/contact-form`;
+    const endpoint = `${environment.baseUrl}`;
 
     this.http.post(endpoint, this.form.value).subscribe({
       next: () => {
